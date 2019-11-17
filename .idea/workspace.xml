@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a96e38e4-a9d3-4fa1-82bb-1d5e4e53e359" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Algo" />
+  </component>
+  <component name="ProjectId" id="1ThnjWebISRFAAHrqNvkpPZFyHb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573830993448" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.DLXPentominoDLUX">
+    <configuration name="Brackets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Brackets" />
+      <module name="Algo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DLXPentominoDLUX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DLXPentominoDLUX" />
+      <module name="Algo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PathNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PathNodes" />
+      <module name="Algo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Paths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Paths" />
+      <module name="Algo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Perm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Perm" />
+      <module name="Algo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Paths" />
+      <item itemvalue="Application.PathNodes" />
+      <item itemvalue="Application.Perm" />
+      <item itemvalue="Application.Brackets" />
+      <item itemvalue="Application.DLXPentominoDLUX" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DLXPentominoDLUX" />
+        <item itemvalue="Application.Brackets" />
+        <item itemvalue="Application.Perm" />
+        <item itemvalue="Application.PathNodes" />
+        <item itemvalue="Application.Paths" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a96e38e4-a9d3-4fa1-82bb-1d5e4e53e359" name="Default Changelist" comment="" />
+      <created>1569498756637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569498756637</updated>
+      <workItem from="1569498760577" duration="14133000" />
+      <workItem from="1570450381760" duration="9000" />
+      <workItem from="1570453047472" duration="236000" />
+      <workItem from="1570453616251" duration="492000" />
+      <workItem from="1570454531977" duration="544000" />
+      <workItem from="1570956701729" duration="2761000" />
+      <workItem from="1570962105683" duration="19896000" />
+      <workItem from="1571646112000" duration="4209000" />
+      <workItem from="1572781402077" duration="17118000" />
+      <workItem from="1572957805902" duration="3796000" />
+      <workItem from="1573130810915" duration="166000" />
+      <workItem from="1573131316963" duration="5014000" />
+      <workItem from="1573137814274" duration="17476000" />
+      <workItem from="1573467781364" duration="801000" />
+      <workItem from="1573576873685" duration="389000" />
+      <workItem from="1573754256494" duration="3446000" />
+      <workItem from="1573758997712" duration="23854000" />
+      <workItem from="1573855488497" duration="18000" />
+      <workItem from="1573921330569" duration="762000" />
+      <workItem from="1573934061520" duration="1166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
