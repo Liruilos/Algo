@@ -2,8 +2,8 @@
 /**
  * Class DLXNode
  *   represents a matrix element of the cover matrix with value 1
- *   links go to up down left right neigbors, and column header
- *   can also be used as colm header or root of column headers
+ *   links go to up down left right neighbors, and column header
+ *   can also be used as column header or root of column headers
  *   matrix is sparsely coded
  *   try to do all operations very efficiently
  *   see:

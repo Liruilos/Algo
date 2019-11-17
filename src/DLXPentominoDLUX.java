@@ -26,11 +26,9 @@ public class DLXPentominoDLUX {
 
   public static void main(String[] args) {
 
-
     printTable();
 
     n = readInt("Please enter the value of n: ");
-
     if (n < 0) {
       n = readInt("The value of n should be greater than 0, please try again: ");
     }
@@ -51,7 +49,7 @@ public class DLXPentominoDLUX {
     nodeSetup = new DLXNode[estTotalPositions][7*n];
 
     System.out.println("Building the Node Matrix...");
-    buildHeaders(h);
+    buildHeaders();
     calcRows();
 
     System.out.println("Building the Dancing Links based on Matrix...");
@@ -67,7 +65,11 @@ public class DLXPentominoDLUX {
 
   //----------------------- Building The Headers ------------------------//
 
-  private static void buildHeaders(DLXNode anchor){
+  /**
+   * Headers are created separately to the regular rows as they need to link to
+   * the external anchor
+   */
+  private static void buildHeaders(){
 
     for (int i = 0; i < n*7; i++){
       //make a new header and add it to the matrices
@@ -77,45 +79,48 @@ public class DLXPentominoDLUX {
       //on the left bind to previous node (initially the anchor node)
       if (i == 0){
         //first node links left to anchor
-        newHeader.L = anchor;
-        anchor.R = newHeader;
+        newHeader.L = h;
+        h.R = newHeader;
       } else if (i == n*7 - 1){
         //last node links left AND right to anchor
         newHeader.L = nodeSetup[0][i-1];
         nodeSetup[0][i-1].R = newHeader;
 
-        newHeader.R = anchor;
-        anchor.L = newHeader;
+        newHeader.R = h;
+        h.L = newHeader;
       } else {
         //every other node sets left links based on index
         newHeader.L = nodeSetup[0][i-1];
         nodeSetup[0][i-1].R = newHeader;
       }
-
     }
-
   }
-
 
   //------------------------- Building The Rows -------------------------//
 
+  /**
+   * Makes an array for every possible configuration of every possible Pentomino/Domino for this size board
+   * for every row, fill in the possibilities - createMatrixEntry takes a list of board positions
+   * eg {0, 1} would be a horizontal domino in the top left corner
+   * each row on the board must be calculated individually, as limited pieces can fit at the edges
+   *
+   */
   private static void calcRows(){
-
-    //for every row, fill in the possibilities - createMatrixEntry takes a list of board positions
-    // eg {0, 1} would be a horizontal domino in the top left corner
-    //each of these rows is a row on the board, as limited pieces can fit at the edges
     for (int row = 0; row < n; row++) {
       int rowStarter = row*7;
+
       //domino -
       for (int i = 0; i < 6; i++) {
         createMatrixEntry(new int[]{rowStarter + i, rowStarter + i + 1});
       }
+
       //domino |
       if (row < n - 1) {
         for (int i = 0; i < 7; i++) {
           createMatrixEntry(new int[]{rowStarter + i, rowStarter + i + 7});
         }
       }
+
       //pentomino +
       if (row < n - 2) {
         for (int i = 0; i < 5; i++) {
@@ -171,7 +176,6 @@ public class DLXPentominoDLUX {
               rowStarter + i + 14,
               rowStarter + i + 21, rowStarter + i + 22
           });
-
           //backwards L shape
           createMatrixEntry(new int[]{
               rowStarter + i + 1,
@@ -179,7 +183,6 @@ public class DLXPentominoDLUX {
               rowStarter + i + 15,
               rowStarter + i + 21, rowStarter + i + 22
           });
-
           //upsidedown L shape
           createMatrixEntry(new int[]{
               rowStarter + i, rowStarter + i + 1,
@@ -187,7 +190,6 @@ public class DLXPentominoDLUX {
               rowStarter + i + 14,
               rowStarter + i + 21
           });
-
           //upsidedown and backwards L shape
           createMatrixEntry(new int[]{
               rowStarter + i, rowStarter + i + 1,
@@ -206,19 +208,16 @@ public class DLXPentominoDLUX {
               rowStarter + i,
               rowStarter + i + 7, rowStarter + i + 8, rowStarter + i + 9, rowStarter + i + 10
           });
-
           // ___| shape
           createMatrixEntry(new int[]{
               rowStarter + i + 3,
               rowStarter + i + 7, rowStarter + i + 8, rowStarter + i + 9, rowStarter + i + 10
           });
-
           // |--- shape
           createMatrixEntry(new int[]{
               rowStarter + i, rowStarter + i + 1, rowStarter + i + 2, rowStarter + i + 3,
               rowStarter + i + 7
           });
-
           // ---| shape
           createMatrixEntry(new int[]{
               rowStarter + i, rowStarter + i + 1, rowStarter + i + 2, rowStarter + i + 3,
@@ -229,6 +228,10 @@ public class DLXPentominoDLUX {
     }
   }
 
+  /**
+   * Makes a new row in the matrix for a possible configuration
+   * @param nodePositions list of board positions of this pentomino/domino
+   */
   private static void createMatrixEntry(int[] nodePositions){
     for (int i : nodePositions){
       nodeSetup[matrixRowCounter][i] = new DLXNode();
@@ -236,8 +239,10 @@ public class DLXPentominoDLUX {
     matrixRowCounter++;
   }
 
+  /**
+   * Link the previously created notes with their neighbours based on matrix position.
+   */
   private static void buildRows(){
-
     //link horizontally, every entry finds the next node right to connect to, headers already done with anchor
     for (int row = 1; row < nodeSetup.length; row++)
     {
